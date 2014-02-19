@@ -1,0 +1,58 @@
+.main{
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 2em;
+  position: relative;
+}
+input[type="radio"]{
+  position: absolute;
+}
+.point1{
+  top: 105px;
+  left: -5px;
+}
+.point2{
+  top: 90px;
+  left: 110px;
+}
+.point3{
+  top: 28px;
+  left: 210px;
+}
+.point4{
+  top: 112px;
+  left: 325px;
+}
+.point5{
+  top: 80px;
+  left: 435px;
+}
+.point6{
+  top: 20px;
+  left: 400px;
+}
+
+.time-curve{
+  //825.48974609375
+  stroke-dasharray: 825 825 ;
+  -webkit-transition: stroke-dashoffset 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+.point1:checked ~ svg .time-curve{
+  stroke-dashoffset: 825;
+}
+.point2:checked ~ svg .time-curve{
+  stroke-dashoffset: 825/5*4;
+}
+.point3:checked ~ svg .time-curve{
+  stroke-dashoffset: 825/5*3
+}
+.point4:checked ~ svg .time-curve{
+  stroke-dashoffset: 825/5*2;
+}
+.point5:checked ~ svg .time-curve{
+  stroke-dashoffset: 825/5*1;
+}
+.point6:checked ~ svg .time-curve{
+  stroke-dashoffset: 0;
+}
